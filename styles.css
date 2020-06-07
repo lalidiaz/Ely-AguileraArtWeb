@@ -1,0 +1,547 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200;300&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #FFFF;
+  overflow-x: hidden;
+  font-family: "Raleway", sans-serif;
+}
+body .go-top {
+  position: fixed;
+  bottom: 100px;
+  right: -100%;
+  width: 50px;
+  height: 50px;
+  border: 2px solid #7cb342;
+  background: #FFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.5s;
+  z-index: 1000;
+}
+@media only screen and (max-width: 600px) {
+  body .go-top {
+    display: none;
+  }
+}
+body .go-top:hover {
+  border: #FFFF;
+  background: #7cb342;
+}
+body .go-top .go {
+  font-size: 30px;
+  color: #212121;
+}
+body .go-top .go:hover {
+  color: #f5f5f5;
+}
+@media only screen and (max-width: 600px) {
+  body .go-top .go:hover {
+    display: none;
+  }
+}
+body #header {
+  position: relative;
+  width: 100%;
+}
+body #header .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: #FFFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 9999;
+}
+body #header .menu .logo-box {
+  margin-left: 60px;
+}
+body #header .menu .logo-box h1, body #header .menu .logo-box a {
+  text-decoration: none;
+  font-size: 35px;
+  font-weight: 400;
+  color: #212121;
+}
+@media only screen and (max-width: 600px) {
+  body #header .menu .logo-box h1, body #header .menu .logo-box a {
+    font-size: 25px;
+  }
+}
+body #header .menu .logo-box .btn-menu .fa-bars {
+  display: none;
+}
+@media only screen and (max-width: 600px) {
+  body #header .menu .logo-box .btn-menu .fa-bars {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 28px;
+    cursor: pointer;
+  }
+  body #header .menu .logo-box .btn-menu .fa-bars:hover {
+    color: #7cb342;
+  }
+}
+body #header .menu .list-container {
+  margin-right: 20px;
+}
+@media only screen and (max-width: 600px) {
+  body #header .menu .list-container {
+    position: absolute;
+    top: 60px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 60px);
+    background-color: #FFFF;
+  }
+}
+body #header .menu .list-container .lists {
+  display: flex;
+}
+@media only screen and (max-width: 600px) {
+  body #header .menu .list-container .lists {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-top: 5px solid #7cb342;
+  }
+}
+body #header .menu .list-container .lists li {
+  list-style: none;
+}
+@media only screen and (max-width: 600px) {
+  body #header .menu .list-container .lists li {
+    width: 90%;
+    margin: 10px 0;
+    border-bottom: 1px #7cb342;
+    text-align: center;
+  }
+}
+body #header .menu .list-container .lists li a {
+  text-decoration: none;
+  margin: 0 10px;
+  padding: 8px;
+  color: #212121;
+  border-radius: 24px;
+  font-size: 1em;
+  transition: 0.3s;
+}
+@media only screen and (max-width: 600px) {
+  body #header .menu .list-container .lists li a {
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+}
+body #header .menu .list-container .lists li a.active {
+  background: #7cb342;
+  color: #FFFF;
+}
+@media only screen and (max-width: 600px) {
+  body #header .menu .list-container .lists li a.active {
+    background: none;
+    color: #7cb342;
+  }
+}
+body #header .menu .list-container .lists li a:hover {
+  background: #7cb342;
+  color: #FFFF;
+}
+@media only screen and (max-width: 600px) {
+  body #header .menu .list-container .lists li a:hover {
+    background: none;
+    color: #7cb342;
+  }
+}
+body #header .img-header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url(./Images/ART.jpeg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+body #header .img-header .welcome {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body #header .img-header .welcome h1 {
+  font-size: 50px;
+  color: #FFFF;
+  font-weight: 200;
+}
+body #header .img-header .welcome hr {
+  width: 400px;
+  height: 2px;
+  background: #FFFF;
+  border: none;
+  margin-top: 5px;
+}
+body #header .img-header .welcome p {
+  color: #FFFF;
+  font-size: 20px;
+  margin-top: 20px;
+}
+body #header .img-header .welcome #down {
+  width: 170px;
+  height: 40px;
+  background: #7cb342;
+  border-radius: 24px;
+  border: none;
+  outline: none;
+  font-size: 22px;
+  color: #FFFF;
+  text-align: center;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+body #header .img-header .welcome #down:hover {
+  background: #ef9a9a;
+}
+body .about-me {
+  width: 100%;
+  margin-top: 120px;
+}
+body .about-me .info-container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+body .about-me .info-container h1 {
+  font-size: 50px;
+  font-weight: 400;
+  color: #212121;
+  text-align: center;
+  margin-bottom: 20px;
+}
+body .about-me .info-container p {
+  text-align: center;
+  font-size: 17px;
+  color: #212121;
+  line-height: 35px;
+  margin: 50px 0px;
+}
+body .about-me .info-container .about-gallery {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 50px 0px;
+}
+body .about-me .info-container .about-gallery img {
+  width: calc(33.33% - 10px);
+  height: 300px;
+  object-fit: cover;
+  margin: 10px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+body .about-me .info-container .more {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+body .about-me .info-container .more button {
+  width: 120px;
+  height: 40px;
+  background: #7cb342;
+  border-radius: 24px;
+  border: none;
+  outline: none;
+  font-size: 22px;
+  color: #FFFF;
+  text-align: center;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+body .about-me .info-container .more button:hover {
+  background: #ef9a9a;
+}
+body .our-projects {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: url(./Images/BACKGROUNDATELIER.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  margin-top: 100px;
+}
+body .our-projects .deg-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+body .our-projects .ejeZproject {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+body .our-projects .container-project {
+  width: 90%;
+  margin: auto;
+  padding-top: 100px;
+}
+body .our-projects .container-project .project-title {
+  border: 2px solid #FFFF;
+  padding: 2px;
+  text-align: center;
+  width: 50%;
+  margin: auto;
+}
+body .our-projects .container-project .project-title h2 {
+  font-size: 40px;
+  color: #FFFF;
+  font-weight: normal;
+}
+body .our-projects .container-project .project-title hr {
+  background: #FFFF;
+  width: 50%;
+  margin: 10px auto;
+}
+body .our-projects .container-project .project-img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 80px;
+  padding-bottom: 100px;
+}
+body .our-projects .container-project .project-img img {
+  width: calc(30% - 10px);
+  margin: 10px;
+  object-fit: cover;
+  border-radius: 20px;
+  cursor: pointer;
+}
+body .testimonio {
+  width: 100%;
+  margin-top: 120px;
+}
+body .testimonio .testimonios-title {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}
+body .testimonio .testimonios-title h2 {
+  font-size: 40px;
+  color: #212121;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+body .testimonio .testimonios-title hr {
+  width: 60%;
+  margin: auto;
+  height: 2px;
+  background-color: #212121;
+  border: none;
+}
+body .box-testimonios {
+  width: 90%;
+  margin: 80px auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+body .box-testimonios .card-testimonio {
+  width: 45%;
+  margin: 20px;
+}
+body .box-testimonios .card-testimonio .card-img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .box-testimonios .card-testimonio .card-img img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+body .box-testimonios .card-testimonio .testimonio-text {
+  width: 100%;
+  border: 2px solid #ef9a9a;
+  padding: 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 200ms;
+  margin-top: 30px;
+}
+body .box-testimonios .card-testimonio .testimonio-text:hover {
+  border: 2px solid #7cb342;
+}
+body .box-testimonios .card-testimonio .testimonio-text h4 {
+  columns: #7cb342;
+  font-size: 30px;
+  font-weight: normal;
+  text-align: center;
+  margin-bottom: 20px;
+  transition: 200ms;
+}
+body .box-testimonios .card-testimonio .testimonio-text h4:hover {
+  color: #7cb342;
+}
+body .box-testimonios .card-testimonio .testimonio-text p {
+  font-size: 19px;
+  color: #212121;
+  text-align: center;
+  line-height: 35px;
+  transition: 200ms;
+}
+body .footer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: url(https://images.unsplash.com/photo-1459908676235-d5f02a50184b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+body .footer .deg-footer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+body .footer .ejeZfooter {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+body .footer .ejeZfooter .footer-content {
+  width: 90%;
+  padding-top: 100px;
+  margin: auto;
+}
+body .footer .ejeZfooter .footer-content .footer-title {
+  width: 50%;
+  margin: auto;
+  border: 2px solid #FFFF;
+  color: #FFFF;
+}
+body .footer .ejeZfooter .footer-content .footer-title h2 {
+  width: 100%;
+  margin: 10px auto;
+  color: #FFFF;
+  font-size: 40px;
+  font-weight: normal;
+  text-align: center;
+  margin-bottom: 10px;
+}
+body .footer .ejeZfooter .footer-content .footer-title hr {
+  width: 80%;
+  margin: 20px auto;
+}
+body .footer .ejeZfooter .footer-content .formulario-content {
+  width: 60%;
+  background: #FFFF;
+  border-radius: 20px;
+  border: 2px solid #7cb342;
+  margin: 50px auto;
+  padding: 30px;
+  margin-bottom: 60px;
+}
+body .footer .ejeZfooter .footer-content .formulario-content #formulario {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+body .footer .ejeZfooter .footer-content .formulario-content #formulario label {
+  text-align: center;
+  color: #212121;
+  font-size: 22px;
+  margin: 30px 0px 10px 0px;
+}
+body .footer .ejeZfooter .footer-content .formulario-content #formulario input {
+  width: 90%;
+  height: 40px;
+  margin: auto;
+  border: 1px solid #7cb342;
+  border-radius: 24px;
+  outline: none;
+  text-align: center;
+  font-size: 17px;
+  color: #212121;
+}
+body .footer .ejeZfooter .footer-content .formulario-content #formulario textarea {
+  width: 90%;
+  margin: auto;
+  margin: auto;
+  border: 1px solid #7cb342;
+  border-radius: 24px;
+  outline: none;
+  font-size: 15px;
+  color: #212121;
+  padding: 20px;
+  height: 200px;
+}
+body .footer .ejeZfooter .footer-content .formulario-content #formulario .send {
+  width: 100%;
+  display: flex;
+  margin: 40px 0;
+  justify-content: center;
+}
+body .footer .ejeZfooter .footer-content .formulario-content #formulario .send button {
+  width: 150px;
+  height: 40px;
+  background: #7cb342;
+  border-radius: 24px;
+  border: none;
+  outline: none;
+  font-size: 22px;
+  color: #FFFF;
+  text-align: center;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+body .footer .ejeZfooter .footer-content .formulario-content #formulario .send button:hover {
+  background-color: #ef9a9a;
+}
+body .footer .ejeZfooter .footer-content .footer-text {
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  border-top: 2px solid #FFFF;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .footer .ejeZfooter .footer-content .footer-text p {
+  color: #FFFF;
+  font-size: 15px;
+}
+
+/*# sourceMappingURL=styles.css.map */
