@@ -1,20 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Tenali+Ramakrishna&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Raleway:wght@400;700&family=Tenali+Ramakrishna&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Neuton:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Capriola&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap');
+
+
+
 //Variables
 
 $color1:#5c6bc0;
-$color2:#212121;
+$color2:#725b53;
 $color3:#ef9a9a;
 $color4:#f5f5f5;
 $color5:#f5f5f5;
+$color6:#b19e9a;
+$color7:#9ab1aa;
+$color8:#b19aa1;
 
 //Media Query
 
 $mobile-breakpoint: 600px;
-
-
-
 
 //Code Styles
 
@@ -26,11 +34,10 @@ $mobile-breakpoint: 600px;
 
 body{
 
-    background: #FFFF;
+    background-color:white;
     overflow-x: hidden;
-    font-family: 'PT Serif', serif;
     font-weight: 400;
-
+    font-family: 'Sawarabi Mincho', sans-serif;
 
     .go-top{
         position: fixed;
@@ -64,13 +71,8 @@ body{
             @media only screen and (max-width: $mobile-breakpoint){
                 display: none;
                 }
-            }
-          
-           
+            }     
         }
-      
-
-        
     }
     //NAV MENU
     #header{
@@ -99,8 +101,7 @@ body{
                     color:$color2;
 
                     @media only screen and (max-width: $mobile-breakpoint){
-                        font-size: 1em;
-                        width: 60%;
+                       display:none;
                     }
                 }
                 
@@ -173,25 +174,16 @@ body{
                            transition: 0.3s;
                        
                            &.active{
-                            background:$color1;
+                            background:$color2;
                             color:#FFFF;
                            }
 
                            &:hover{
                             background:$color2;
                             color:#FFFF;
-                             }
-
-                            @media only screen and (max-width: $mobile-breakpoint){
-                            
-                            }
-                            
+                             }  
                         }
-                   
-                   
                     }
-
-                    
                 }
             }
        
@@ -199,12 +191,17 @@ body{
 
         .img-header{
             position: relative;
-            width:100%;
+            width:100vw;
             height:100vh;
-            background: url(./Images/whitebackground.jpeg);
+            overflow-x: hidden;
+            background: url(./Images/this.jpg);
             background-attachment: fixed;
             background-position: center;
             background-size: cover;
+
+            @media only screen and (max-width: $mobile-breakpoint){
+                height: 100vh;
+                }
 
                 .welcome{
                     position: absolute;
@@ -212,64 +209,72 @@ body{
                     left:0;
                     width: 100%;
                     height: 100%;
-                    background: rgba(0, 0, 0, 0.5);
+                    background: rgba(0, 0, 0, 0.3);
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     flex-direction: column;
+                
 
                     h1{
-                        font-size: 50px;
+                        font-size: 5em;
                         color:#FFFF;
                         font-weight: 200;
+                        font-family: "Sawarabi Mincho", sans-serif;
                     }
                  
                     p{
                         color:#FFFF;
-                        font-size:20px;
-                        margin-top:20px;
+                        font-size:1.5em;
+                        font-family: "Sawarabi Mincho", sans-serif;
+                        font-weight: lighter;
                     }
-                  
-                        
                     @media only screen and (max-width: $mobile-breakpoint){
                     width:100%;
+                    font-size: 0.5em;
                     }
-                
                 }
         }
-
-
     }
 
     main{
-
+       
         .about-me{
             width:100%;
-            margin-top:120px;
-    
+            margin-top:120px;  
+
             .info-container{
                 width:80%;
                 margin:auto;
                 display: flex;
-                justify-content: center;
+                justify-content: start;;
                 flex-direction: column;
-    
+                padding-top: 5em;
+               
+            }
                 h1{
                     font-size: 50px;
                     font-weight: 400;
-                    color:$color2;
+                    color:#6d4c41;
                     text-align: center;
                     margin-bottom: 20px;
+                    @media only screen and (max-width: $mobile-breakpoint){
+                        font-size: 1.5em;
+                        }
                 }
     
                 p{
                     text-align: center;
-                    font-size:17px;
+                    font-size:18px;
                     color:$color2;
                     line-height: 23px;
-                    //margin:50px 0px;
                     width: 50%;
                     margin: auto;
+                    @media only screen and (max-width: $mobile-breakpoint){
+                        width: 80%;
+                        font-size:16px;
+                        }
+
                 }
     
                 .about-gallery{
@@ -279,15 +284,17 @@ body{
                     margin:50px 0px;
     
                         img{
-                            width: calc(33.33% - 10px);
-                            height:300px;
+                            filter: grayscale(100%);
+                            width: calc(20% - 10px);
                             object-fit: cover;
+                            background-position: center;
+                            background-size: cover;
                             margin:10px 10px;
-                            border-radius: 10px;
                             cursor: pointer;
     
                             @media only screen and (max-width: $mobile-breakpoint){
-                                width: 100%;   
+                                width: 200px;  
+                                margin: 0 auto;
                                 }
                         }
                     @media only screen and (max-width: $mobile-breakpoint){
@@ -318,7 +325,6 @@ body{
                         &:hover{
                             background:$color3;
                         }
-    
                     }
                 }
     
@@ -329,10 +335,7 @@ body{
             position: relative;
             width: 100%;
             height: 100%;
-            background: url(./Images/greenbackground.jpeg);
-            background-attachment: fixed;
-            background-position: center;
-            background-size: cover;
+            background:white;
             margin-top:100px;
     
             .deg-background{
@@ -341,33 +344,44 @@ body{
                 left:0;
                 width:100%;
                 height: 100%;
-                background: rgba(0, 0, 0, 0.6)
+                
             }
             .ejeZproject{
                 position:relative;
                 width:100%;
                 height:100%;
+                
             }
     
             .container-project{
                 width:90%;
                 margin:auto;
-                padding-top:100px;
+
     
+                @media only screen and (max-width: $mobile-breakpoint){
+                    padding-top:50px;
+                }
+
                 .project-title{
                     border:none;
                     padding:2px;
                     text-align: center;
                     width:50%;
-                    margin:auto;
+                    margin:0 auto;
+
+                    @media only screen and (max-width: $mobile-breakpoint){
+                    width:100%;
+                    }
                     
                     h2{
                         font-size: 40px;
-                        color:#FFFF;
+                        color:#9ab1aa;
                         font-weight: normal;
+
+                        @media only screen and (max-width: $mobile-breakpoint){
+                            font-size: 30px;
+                            }
                     }
-                   
-                
                 }
     
                 
@@ -377,24 +391,33 @@ body{
                     justify-content: center;
                     flex-wrap: wrap;
                     margin-top: 80px;
-                    padding-bottom: 100px;
-    
-    
+
                     @media only screen and (max-width: $mobile-breakpoint){
                         flex-direction: column;   
                         }
     
                     img{
                         width: calc(30% - 10px);
-                        margin:10px;
+                        margin:25px;
                         object-fit: cover;
-                        border-radius: 20px;
+                        border-radius: 5px;
                         cursor: pointer;
+                        filter: greyscale(100%);
+
+                        -webkit-filter: grayscale(1);
+                        -webkit-transition: -webkit-filter 500ms linear  filter grayscale(1);
+                    
+                       &:hover{
+                           -webkit-filter: grayscale(0%);
+                       }
+                       
                         
                         @media only screen and (max-width: $mobile-breakpoint){
                         width:100%;
                         padding:20px;
-                        border-radius: 20px;
+                        margin:0;
+                        -webkit-filter: grayscale(0%);
+
                         }
                     
                     }
@@ -403,10 +426,13 @@ body{
                
             }
         }
-    
+    .hero{
+        top:0;
+        
         .informacion{
             width:100%;
-            margin-top: 120px;
+            padding-top: 130px;
+            padding-bottom: 110px;
            
             @media only screen and (max-width: $mobile-breakpoint){
                 flex-direction: column;   
@@ -424,9 +450,11 @@ body{
                     color:$color2;
                     font-weight: normal;
                     margin-bottom: 10px;
+
+                    @media only screen and (max-width: $mobile-breakpoint){
+                    font-size: 22px;
+                    }
                 }
-             
-    
             }
         
             .mapa-address{
@@ -438,6 +466,7 @@ body{
                 flex-direction: column;
                 margin-left: 0;
                 margin-bottom: 0;
+
                 }
     
                 .map{
@@ -451,6 +480,10 @@ body{
                     padding-left: 2em;
                     line-height: 1.5em;
     
+                    @media only screen and (max-width: $mobile-breakpoint){
+                    padding: 3em;
+                    }
+
                     .numer-house{
                         font-weight: 700;
                     
@@ -458,15 +491,12 @@ body{
                             margin-top:2em;
                         }
                     }
-    
-                    
                 }
             }
-        
-          
-        
         }
     }
+    }
+        
     
         
 
@@ -474,34 +504,39 @@ body{
                 position: relative;
                 width: 100%;
                 height: 100%;
-                background: url(https://images.unsplash.com/photo-1459908676235-d5f02a50184b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);
-                background-attachment: fixed;
-                background-position: center;
-                background-size: cover;    
-            
+                background-color: #fff9c4;
+
                 .contact-details{
                     position: absolute;
                     width: 100%;
                     height: 100%;
-                    background: rgba(0, 0, 0, 0.6);
+                    background: rgba(0, 0, 0, 0.4);
                 }
 
                 .ejeZfooter{
                     position: relative;
                     width: 100%;
                     height:100%;
+                    background-image: linear-gradient(to right top, #7c7c7c, #959696, #afb1b1, #cacccb, #e7e8e6);
 
                     .contact-content{
                         width:90%;
-                        padding-top: 100px;
-                        margin:auto;
-
-                      
+                        padding-top: 10em;
+                        margin: 0 auto;
+                        height: 750px;
+                        
+                        @media only screen and (max-width: $mobile-breakpoint){
+                        height:500px;
+                        }
                         .contact-title{
                             width:50%;
                             margin:auto;
-                            border:2px solid #FFFF;
                             color:#FFFF;
+
+                            @media only screen and (max-width: $mobile-breakpoint){
+                                width:50%;
+                                }
+
                             h2{
                                 width: 100%;
                                 margin:10px auto;
@@ -510,9 +545,12 @@ body{
                                 font-weight: normal;
                                 text-align: center;
                                 margin-bottom: 10px;
+                            
+                                @media only screen and (max-width: $mobile-breakpoint){
+                                    font-size: 20px;
+                                }
+                            
                             }
-
-                
                         }
 
                         .day-timing{
@@ -525,6 +563,11 @@ body{
                             text-align: center;
                             line-height: 2em;
                             font-size:1.5em;
+
+                            @media only screen and (max-width: $mobile-breakpoint){
+                                width:100%;
+                                font-size: 16px;
+                                }
                         }
                          
                                 }
@@ -535,19 +578,19 @@ body{
                     
                     
             .footer-text{   
-                            width: 100%;
-                            bottom: 0;
-                            left: 0;
-                            background: rgba(0, 0, 0, 0.8);
-                            border-top: 2px solid #FFFF;
-                            width: 100%;
-                            height:60px;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            p{
-                                color: #FFFF;
-                                font-size: 15px;
+                    width: 100%;
+                    bottom: 0;
+                    left: 0;
+                    background: rgba(0, 0, 0, 0.8);
+                    border-top: 2px solid #FFFF;
+                    width: 100%;
+                    height:60px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                        p{
+                            color: #FFFF;
+                            font-size: 15px;
 
                                 @media only screen and (max-width: $mobile-breakpoint){
                                 font-size: 10px;
@@ -559,7 +602,7 @@ body{
                          width:100%;
                         }
             }
-}
+
                 
     
     

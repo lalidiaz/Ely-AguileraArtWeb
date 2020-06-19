@@ -1,6 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Tenali+Ramakrishna&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Raleway:wght@400;700&family=Tenali+Ramakrishna&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Neuton:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Capriola&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Averia+Serif+Libre&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -8,10 +13,10 @@
 }
 
 body {
-  background: #FFFF;
+  background-color: white;
   overflow-x: hidden;
-  font-family: "PT Serif", serif;
   font-weight: 400;
+  font-family: "Sawarabi Mincho", sans-serif;
 }
 body .go-top {
   position: fixed;
@@ -19,7 +24,7 @@ body .go-top {
   right: -100%;
   width: 50px;
   height: 50px;
-  border: 2px solid #212121;
+  border: 2px solid #725b53;
   background: #FFFF;
   display: flex;
   justify-content: center;
@@ -35,11 +40,11 @@ body .go-top {
 }
 body .go-top:hover {
   border: #FFFF;
-  background: #212121;
+  background: #725b53;
 }
 body .go-top .go {
   font-size: 30px;
-  color: #212121;
+  color: #725b53;
 }
 body .go-top .go:hover {
   color: #f5f5f5;
@@ -73,12 +78,11 @@ body #header .menu .logo-box h1, body #header .menu .logo-box a {
   text-decoration: none;
   font-size: 1.2em;
   font-weight: 400;
-  color: #212121;
+  color: #725b53;
 }
 @media only screen and (max-width: 600px) {
   body #header .menu .logo-box h1, body #header .menu .logo-box a {
-    font-size: 1em;
-    width: 60%;
+    display: none;
   }
 }
 body #header .menu .logo-box .btn-menu .fa-bars {
@@ -94,7 +98,7 @@ body #header .menu .logo-box .btn-menu .fa-bars {
     cursor: pointer;
   }
   body #header .menu .logo-box .btn-menu .fa-bars:hover {
-    color: #212121;
+    color: #725b53;
   }
 }
 body #header .menu .list-container {
@@ -121,7 +125,7 @@ body #header .menu .list-container .lists {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border-top: 5px solid #212121;
+    border-top: 5px solid #725b53;
   }
 }
 body #header .menu .list-container .lists li {
@@ -131,7 +135,7 @@ body #header .menu .list-container .lists li {
   body #header .menu .list-container .lists li {
     width: 90%;
     margin: 10px 0;
-    border-bottom: 1px #212121;
+    border-bottom: 1px #725b53;
     text-align: center;
   }
 }
@@ -139,27 +143,33 @@ body #header .menu .list-container .lists li a {
   text-decoration: none;
   margin: 0 10px;
   padding: 8px;
-  color: #212121;
+  color: #725b53;
   border-radius: 1em;
   font-size: 1em;
   transition: 0.3s;
 }
 body #header .menu .list-container .lists li a.active {
-  background: #5c6bc0;
+  background: #725b53;
   color: #FFFF;
 }
 body #header .menu .list-container .lists li a:hover {
-  background: #212121;
+  background: #725b53;
   color: #FFFF;
 }
 body #header .img-header {
   position: relative;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
-  background: url(./Images/whitebackground.jpeg);
+  overflow-x: hidden;
+  background: url(./Images/this.jpg);
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
+}
+@media only screen and (max-width: 600px) {
+  body #header .img-header {
+    height: 100vh;
+  }
 }
 body #header .img-header .welcome {
   position: absolute;
@@ -167,25 +177,28 @@ body #header .img-header .welcome {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.3);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 body #header .img-header .welcome h1 {
-  font-size: 50px;
+  font-size: 5em;
   color: #FFFF;
   font-weight: 200;
+  font-family: "Sawarabi Mincho", sans-serif;
 }
 body #header .img-header .welcome p {
   color: #FFFF;
-  font-size: 20px;
-  margin-top: 20px;
+  font-size: 1.5em;
+  font-family: "Sawarabi Mincho", sans-serif;
+  font-weight: lighter;
 }
 @media only screen and (max-width: 600px) {
   body #header .img-header .welcome {
     width: 100%;
+    font-size: 0.5em;
   }
 }
 body main .about-me {
@@ -196,54 +209,68 @@ body main .about-me .info-container {
   width: 80%;
   margin: auto;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   flex-direction: column;
+  padding-top: 5em;
 }
-body main .about-me .info-container h1 {
+body main .about-me h1 {
   font-size: 50px;
   font-weight: 400;
-  color: #212121;
+  color: #6d4c41;
   text-align: center;
   margin-bottom: 20px;
 }
-body main .about-me .info-container p {
+@media only screen and (max-width: 600px) {
+  body main .about-me h1 {
+    font-size: 1.5em;
+  }
+}
+body main .about-me p {
   text-align: center;
-  font-size: 17px;
-  color: #212121;
+  font-size: 18px;
+  color: #725b53;
   line-height: 23px;
   width: 50%;
   margin: auto;
 }
-body main .about-me .info-container .about-gallery {
+@media only screen and (max-width: 600px) {
+  body main .about-me p {
+    width: 80%;
+    font-size: 16px;
+  }
+}
+body main .about-me .about-gallery {
   width: 100%;
   display: flex;
   justify-content: center;
   margin: 50px 0px;
 }
-body main .about-me .info-container .about-gallery img {
-  width: calc(33.33% - 10px);
-  height: 300px;
+body main .about-me .about-gallery img {
+  filter: grayscale(100%);
+  width: calc(20% - 10px);
   object-fit: cover;
+  background-position: center;
+  background-size: cover;
   margin: 10px 10px;
-  border-radius: 10px;
   cursor: pointer;
 }
 @media only screen and (max-width: 600px) {
-  body main .about-me .info-container .about-gallery img {
-    width: 100%;
+  body main .about-me .about-gallery img {
+    width: 200px;
+    margin: 0 auto;
   }
 }
 @media only screen and (max-width: 600px) {
-  body main .about-me .info-container .about-gallery {
+  body main .about-me .about-gallery {
     flex-direction: column;
   }
 }
-body main .about-me .info-container .more {
+body main .about-me .more {
   width: 100%;
   display: flex;
   justify-content: center;
 }
-body main .about-me .info-container .more button {
+body main .about-me .more button {
   width: 120px;
   height: 40px;
   background: #5c6bc0;
@@ -257,158 +284,197 @@ body main .about-me .info-container .more button {
   cursor: pointer;
   transition: 0.5s;
 }
-body main .about-me .info-container .more button:hover {
+body main .about-me .more button:hover {
   background: #ef9a9a;
 }
-body main .our-projects {
+body .our-projects {
   position: relative;
   width: 100%;
   height: 100%;
-  background: url(./Images/greenbackground.jpeg);
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
+  background: white;
   margin-top: 100px;
 }
-body main .our-projects .deg-background {
+body .our-projects .deg-background {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6);
 }
-body main .our-projects .ejeZproject {
+body .our-projects .ejeZproject {
   position: relative;
   width: 100%;
   height: 100%;
 }
-body main .our-projects .container-project {
+body .our-projects .container-project {
   width: 90%;
   margin: auto;
-  padding-top: 100px;
 }
-body main .our-projects .container-project .project-title {
+@media only screen and (max-width: 600px) {
+  body .our-projects .container-project {
+    padding-top: 50px;
+  }
+}
+body .our-projects .container-project .project-title {
   border: none;
   padding: 2px;
   text-align: center;
   width: 50%;
-  margin: auto;
+  margin: 0 auto;
 }
-body main .our-projects .container-project .project-title h2 {
+@media only screen and (max-width: 600px) {
+  body .our-projects .container-project .project-title {
+    width: 100%;
+  }
+}
+body .our-projects .container-project .project-title h2 {
   font-size: 40px;
-  color: #FFFF;
+  color: #9ab1aa;
   font-weight: normal;
 }
-body main .our-projects .container-project .project-img {
+@media only screen and (max-width: 600px) {
+  body .our-projects .container-project .project-title h2 {
+    font-size: 30px;
+  }
+}
+body .our-projects .container-project .project-img {
   width: 100%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   margin-top: 80px;
-  padding-bottom: 100px;
 }
 @media only screen and (max-width: 600px) {
-  body main .our-projects .container-project .project-img {
+  body .our-projects .container-project .project-img {
     flex-direction: column;
   }
 }
-body main .our-projects .container-project .project-img img {
+body .our-projects .container-project .project-img img {
   width: calc(30% - 10px);
-  margin: 10px;
+  margin: 25px;
   object-fit: cover;
-  border-radius: 20px;
+  border-radius: 5px;
   cursor: pointer;
+  filter: greyscale(100%);
+  -webkit-filter: grayscale(1);
+  -webkit-transition: -webkit-filter 500ms linear filter grayscale(1);
+}
+body .our-projects .container-project .project-img img:hover {
+  -webkit-filter: grayscale(0%);
 }
 @media only screen and (max-width: 600px) {
-  body main .our-projects .container-project .project-img img {
+  body .our-projects .container-project .project-img img {
     width: 100%;
     padding: 20px;
-    border-radius: 20px;
+    margin: 0;
+    -webkit-filter: grayscale(0%);
   }
 }
-body main .informacion {
+body .hero {
+  top: 0;
+}
+body .hero .informacion {
   width: 100%;
-  margin-top: 120px;
+  padding-top: 130px;
+  padding-bottom: 110px;
 }
 @media only screen and (max-width: 600px) {
-  body main .informacion {
+  body .hero .informacion {
     flex-direction: column;
   }
 }
-body main .informacion .informacion-title {
+body .hero .informacion .informacion-title {
   width: 50%;
   margin: auto;
   text-align: center;
   margin-bottom: 2em;
   margin-top: 2em;
 }
-body main .informacion .informacion-title h2 {
+body .hero .informacion .informacion-title h2 {
   font-size: 40px;
-  color: #212121;
+  color: #725b53;
   font-weight: normal;
   margin-bottom: 10px;
 }
-body main .informacion .mapa-address {
+@media only screen and (max-width: 600px) {
+  body .hero .informacion .informacion-title h2 {
+    font-size: 22px;
+  }
+}
+body .hero .informacion .mapa-address {
   display: flex;
   margin-left: 15em;
   margin-bottom: 5em;
 }
 @media only screen and (max-width: 600px) {
-  body main .informacion .mapa-address {
+  body .hero .informacion .mapa-address {
     flex-direction: column;
     margin-left: 0;
     margin-bottom: 0;
   }
 }
 @media only screen and (max-width: 600px) {
-  body main .informacion .mapa-address .map {
+  body .hero .informacion .mapa-address .map {
     width: 100%;
     overflow-x: hidden;
   }
 }
-body main .informacion .mapa-address .address {
+body .hero .informacion .mapa-address .address {
   padding-left: 2em;
   line-height: 1.5em;
 }
-body main .informacion .mapa-address .address .numer-house {
+@media only screen and (max-width: 600px) {
+  body .hero .informacion .mapa-address .address {
+    padding: 3em;
+  }
+}
+body .hero .informacion .mapa-address .address .numer-house {
   font-weight: 700;
 }
-body main .informacion .mapa-address .address .numer-house h4 {
+body .hero .informacion .mapa-address .address .numer-house h4 {
   margin-top: 2em;
 }
-body .contact {
+
+.contact {
   position: relative;
   width: 100%;
   height: 100%;
-  background: url(https://images.unsplash.com/photo-1459908676235-d5f02a50184b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
+  background-color: #fff9c4;
 }
-body .contact .contact-details {
+.contact .contact-details {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.4);
 }
-body .contact .ejeZfooter {
+.contact .ejeZfooter {
   position: relative;
   width: 100%;
   height: 100%;
+  background-image: linear-gradient(to right top, #7c7c7c, #959696, #afb1b1, #cacccb, #e7e8e6);
 }
-body .contact .ejeZfooter .contact-content {
+.contact .ejeZfooter .contact-content {
   width: 90%;
-  padding-top: 100px;
-  margin: auto;
+  padding-top: 10em;
+  margin: 0 auto;
+  height: 750px;
 }
-body .contact .ejeZfooter .contact-content .contact-title {
+@media only screen and (max-width: 600px) {
+  .contact .ejeZfooter .contact-content {
+    height: 500px;
+  }
+}
+.contact .ejeZfooter .contact-content .contact-title {
   width: 50%;
   margin: auto;
-  border: 2px solid #FFFF;
   color: #FFFF;
 }
-body .contact .ejeZfooter .contact-content .contact-title h2 {
+@media only screen and (max-width: 600px) {
+  .contact .ejeZfooter .contact-content .contact-title {
+    width: 50%;
+  }
+}
+.contact .ejeZfooter .contact-content .contact-title h2 {
   width: 100%;
   margin: 10px auto;
   color: #FFFF;
@@ -417,7 +483,12 @@ body .contact .ejeZfooter .contact-content .contact-title h2 {
   text-align: center;
   margin-bottom: 10px;
 }
-body .contact .ejeZfooter .contact-content .day-timing {
+@media only screen and (max-width: 600px) {
+  .contact .ejeZfooter .contact-content .contact-title h2 {
+    font-size: 20px;
+  }
+}
+.contact .ejeZfooter .contact-content .day-timing {
   width: 50%;
   margin: auto;
   padding-bottom: 3em;
@@ -428,7 +499,14 @@ body .contact .ejeZfooter .contact-content .day-timing {
   line-height: 2em;
   font-size: 1.5em;
 }
-body .footer-text {
+@media only screen and (max-width: 600px) {
+  .contact .ejeZfooter .contact-content .day-timing {
+    width: 100%;
+    font-size: 16px;
+  }
+}
+
+.footer-text {
   width: 100%;
   bottom: 0;
   left: 0;
@@ -440,18 +518,18 @@ body .footer-text {
   justify-content: center;
   align-items: center;
 }
-body .footer-text p {
+.footer-text p {
   color: #FFFF;
   font-size: 15px;
 }
 @media only screen and (max-width: 600px) {
-  body .footer-text p {
+  .footer-text p {
     font-size: 10px;
     text-align: center;
   }
 }
 @media only screen and (max-width: 600px) {
-  body .footer-text {
+  .footer-text {
     width: 100%;
   }
 }
